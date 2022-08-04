@@ -1,0 +1,111 @@
+h1 {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background: #fff;
+    width: calc(100% - 100px);
+    height: 100vh;
+    transition: 0.5s;
+    padding: 100px 20px;
+    border-right: 1px solid #ddd;
+}
+
+nav li {
+    line-height: 2;
+    border-bottom: 1px solid #ddd;
+}
+
+nav li a {
+    display: flex;
+}
+
+nav.on {
+    left: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+
+}
+
+section figure {
+
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 50%px;
+}
+
+section figure img {
+    max-width: 100%;
+}
+
+section h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mopen {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+}
+
+.mopen span {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 2px;
+    background: #333;
+    transition: 0.5s;
+}
+
+.mopen span:nth-child(1) {
+    top: 7px;
+}
+
+.mopen span:nth-child(2) {
+    top: 14px;
+}
+
+.mopen span:nth-child(3) {
+    top: 14px;
+}
+
+.mopen span:nth-child(4) {
+    bottom: 7px;
+}
+
+.mopen.on span:nth-child(1) {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.mopen.on span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.mopen.on span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.mopen.on span:nth-child(4) {
+    transform: translateX(100px);
+    opacity: 0;
+}

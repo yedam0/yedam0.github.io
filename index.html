@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dam's</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="/">dam's</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#m01">고양이01</a></li>
+                <li><a href="#m02">고양이02</a></li>
+                <li><a href="#m03">고양이03</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="m01">
+        <figure>
+            <img src="./img/cat01.jpg" alt="">
+        </figure>
+        <h2>고양이가 세상을 구한다</h2>
+        <p>냥냥냥냥냥냥냥냥냥</p>
+    </section>
+    <section id="m02">
+        <figure>
+            <img src="./img/cat02.jpg" alt="">
+        </figure>
+        <h2>고양이가 세상을 구한다</h2>
+        <p>냥냥냥냥냥냥냥냥냥</p>
+    </section>
+    <section id="m03">
+        <figure>
+            <img src="./img/cat04.jpg" alt="">
+        </figure>
+        <h2>고양이가 세상을 구한다</h2>
+        <p>냥냥냥냥냥냥냥냥냥</p>
+    </section>
+
+    <div class="mopen">
+        <span></span><span></span><span></span><span></span>
+    </div>
+    <script>
+        $('.mopen').on('click', function () {
+            $(this).toggleClass('on');
+            $('nav').toggleClass('on');
+        })
+
+        $('nav a').on('click', function (e) {
+            e.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top })
+            $('.mopen').toggleClass('on');
+            $('nav').toggleClass('on');
+        })
+
+    </script>
+</body>
+
+</html>
